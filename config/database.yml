@@ -20,6 +20,7 @@ test:
   <<: *default
   database: db/test.sqlite3
 
+#this would not take effect for production for Heroku
 production:
   <<: *default
   database: db/production.sqlite3

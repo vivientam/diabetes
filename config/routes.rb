@@ -4,6 +4,17 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'static_pages#index'
+  # path 'controller#method'
+
+  get '/contacts' => 'static_pages#contacts'
+  # harry_path -> '/harry'
+
+  get '/index' => 'static_pages#index'
+
+  get '/deserves' => 'static_pages#deserves'
+
+  get '/hobbies' => 'static_pages#hobbies'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

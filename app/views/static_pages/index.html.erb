@@ -1,8 +1,39 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 text-center">
-      <h1>HIHI</h1>
+		<h1 id='doctorName'>Dr Kim</h1>
 
-    </div>
+		<div class='indexTags'>
+		<%= link_to "Deserves", deserves_path %>
+		<%= link_to "Hobbies", hobbies_path %>
+		<%= link_to "Contacts", contacts_path %>
+		</div>
+
+		<!-- Button trigger modal -->
+		<button type="button" class="button btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+		Bibliography
+		</button>
+
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		    <h4 class="modal-title" id="myModalLabel">Bibliography of Dr Kim</h4>
+		  </div>
+		  <div class="modal-body">
+		    I was born and grew up in Hong Kong.  I graduated as a dentist in Hong Kong University.
+		  </div>
+		  <div class="modal-footer">
+		    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		    <button type="button" class="btn btn-primary">Email
+		    <%= mail_to "hkahinfo@hkah.org.hk" %>
+		    </button>
+		  </div>
+		</div>
+		</div>
+		</div>
+
   </div>
 </div>
