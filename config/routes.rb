@@ -6,16 +6,8 @@ Rails.application.routes.draw do
   root 'static_pages#index'
   # path 'controller#method'
 
-  get '/contacts' => 'static_pages#contacts'
-  # harry_path -> '/harry'
-
-  get '/index' => 'static_pages#index'
-
-  get '/deserves' => 'static_pages#deserves'
-
-  get '/hobbies' => 'static_pages#hobbies'
-
-  resources :articles
+  
+  resources :users
 
   # resources :users
 
