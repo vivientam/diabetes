@@ -1,0 +1,18 @@
+  <h1>A list of comments should be here:</h1>
+
+
+<% @comments.each do |comment| %>
+  
+  <div>
+    <%= comment.id %>
+    <%= comment.content %>
+    <%= comment.created_at %>
+    <%= link_to "Link to this comment", comment %>
+  </div>
+<% end %>
+
+<%= link_to "New comment", new_comment_path %>
+
+<script>
+$( "p" ).append( comment.content;
+</script>
