@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   
   resources :users
 
+  resources :comments
+
+  resources :readings
+
   # resources :users
 
   # Example of regular route:
