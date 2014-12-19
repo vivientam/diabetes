@@ -13,18 +13,22 @@
   <div class="container">
 
     <div class="row">
-      <div class="col-lg-4">
+      <div class="col-xs-3">
 
         <% if current_user %>
           <%= current_user.email %>
           <%= button_to "Sign out", destroy_user_session_path, :method => :delete %>
         <% else %>
-          <%= link_to "Sign in", new_user_session_path %>
-          <%= link_to "Sign up", new_user_registration_path %>
+
+          <%= button_to "Sign in", new_user_session_path %>
+          <%= button_to "Sign up", new_user_registration_path, :method => :get %>
         <% end %>
-      
+
+        <!-- ADD LINK TO MY PROFILE -->
+        <!-- ADD LINK TO MY READINGS -->
+
       </div>
-      <div class="col-lg-8">
+      <div class="col-xs-9">
          <%= yield %>
       </div>
     

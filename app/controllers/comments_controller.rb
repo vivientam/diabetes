@@ -11,21 +11,13 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @myComment = current_user.comments.new(comment_params)
-    
-    if @myComment.save
-      
-        respond_to do |format|
-          
-          format.js
-          
-        end
-      
+    # comment = Comment.new(comment_params)
+    comment = current_user.comments.new(comment_params)
+
+    if comment.save
+      redirect_to comment.reading
     else
-      respond_to do |format|
-          format.js { render 'fail.js.erb' }
-          format.html {redirect_to :back}
-      end
+      redirect_to :back
     end
   end
 
@@ -36,7 +28,7 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:post_id, :content)
+    params.require(:comment).permit(:reading_id, :content)
   end
 
 end

@@ -1,0 +1,19 @@
+<h1>A list of your readings should be here:</h1>
+
+
+<% @readings.each do |reading| %>
+  
+  <div>
+    <%= reading.id %>
+    <%= reading.sugar_level %>
+    <%= reading.weight %>
+    <%= reading.created_at %>
+    <!-- <%= link_to "Link to this reading", reading %> -->
+  </div>
+<% end %>
+
+<%= link_to "New reading", new_reading_path %>
+
+<!-- // <script> -->
+<!-- // $( "p" ).append( reading.sugar_level; -->
+<!-- // </script> -->

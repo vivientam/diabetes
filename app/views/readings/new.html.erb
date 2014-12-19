@@ -1,0 +1,15 @@
+<h1>Add a new reading:
+</h1>
+
+<%= form_for @reading do |f| %>
+  <div>
+    <%= f.label :sugar_level %>
+    <%= f.text_field :sugar_level %>
+
+    <%= f.label :weight %>
+    <%= f.text_field :weight %>
+
+    <%= f.submit "Submit" %>
+  </div>
+
+<% end %>

@@ -1,0 +1,36 @@
+<h2>Reading on: <%= @reading.created_at %></h2>
+
+<h3>Sugar Level: <%= @reading.sugar_level %></h3>
+<h3>Weight: <%= @reading.weight %></h3>
+<!-- We want to be able to create comments here -->
+<!-- We want a form here -->
+
+<!-- empty comment object -->
+<%= form_for @comment do |f| %>
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+
+  <%= f.text_field :reading_id, :value => @reading.id, :hidden => true %>
+
+  <%= f.submit "Submit new comment" %>
+<% end %>
+
+<!-- I want to list out all the comments made for this reading -->
+<h1>Comments</h1>
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th>Owner</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reading.comments.each do |comment| %>
+      <tr>
+        <td><%= comment.content %></td>
+        <td><%= comment.user.email %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
