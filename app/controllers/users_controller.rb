@@ -24,16 +24,20 @@ before_action :authenticate_user!, only: [:new, :create]
     end
   end     
   
+  def edit
+    @user = User.find(params[:id])
+  end
+
   def show
     
     @user = User.find(params[:id])
-    @comment = Comment.new
+    
   end
 
   # this is only for internal use.
   private
     def user_params
       params.require(:user).
-        permit(:title, :age)
+        permit(:id, :name, :title, :email, :hospital, :dob)
     end
 end

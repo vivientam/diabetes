@@ -13,14 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20141218050934) do
 
-  create_table "articles", force: true do |t|
-    t.string   "title"
-    t.string   "content"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "comments", force: true do |t|
     t.integer  "user_id"
     t.integer  "reading_id"
@@ -39,6 +31,10 @@ ActiveRecord::Schema.define(version: 20141218050934) do
   end
 
   create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "title"
+    t.string   "hospital"
+    t.string   "dob"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "email",                  default: "", null: false

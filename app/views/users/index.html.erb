@@ -1,1 +1,16 @@
-<h1>Users</h1>
+<h1>A list of users should be here:</h1>
+
+
+<% @users.each do |user| %>
+  
+  <div>
+    <%= user.id %>
+    <%= user.name %>
+    <%= user.title %> 
+    <%= user.dob %> 
+    <%= user.email %> 
+    <%= user.hospital %> 
+    <%= user.created_at %>
+    <%= link_to "Link to this user", user %>
+  </div>
+<% end %>

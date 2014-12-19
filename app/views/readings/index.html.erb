@@ -8,11 +8,14 @@
     <%= reading.sugar_level %>
     <%= reading.weight %>
     <%= reading.created_at %>
-    <!-- <%= link_to "Link to this reading", reading %> -->
+    <%= link_to "Link to this reading", reading %>
   </div>
 <% end %>
 
 <%= link_to "New reading", new_reading_path %>
+
+<%= link_to "Users", users_path %>
+
 
 <!-- // <script> -->
 <!-- // $( "p" ).append( reading.sugar_level; -->
