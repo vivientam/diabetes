@@ -3,6 +3,7 @@ class CreateComments < ActiveRecord::Migration
     create_table :comments do |t|
       t.integer :user_id
       t.integer :reading_id
+      t.string :title
       t.string :content
       t.boolean :read_by_patient
       

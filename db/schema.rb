@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20141218050934) do
   create_table "comments", force: true do |t|
     t.integer  "user_id"
     t.integer  "reading_id"
+    t.string   "title"
     t.string   "content"
     t.boolean  "read_by_patient"
     t.datetime "created_at"
