@@ -1,21 +1,26 @@
 <h1>A list of your readings should be here:</h1>
 
+<div id="container">Chart
+</div>
 
 <% @readings.each do |reading| %>
-  
+
   <div>
     <%= reading.id %>
     <%= reading.sugar_level %>
     <%= reading.weight %>
     <%= reading.created_at %>
+
     <%= link_to "Link to this reading", reading %>
   </div>
+
 <% end %>
 
 <%= link_to "New reading", new_reading_path %>
 
 <%= link_to "Users", users_path %>
 
+<%= @something_something %>
 
 <!-- // <script> -->
 <!-- // $( "p" ).append( reading.sugar_level; -->

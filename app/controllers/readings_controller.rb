@@ -1,10 +1,24 @@
 class ReadingsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create] 
 
+before_action :authenticate_user!, only: [:new, :create, :index, :cat]
+
+  def cat
+    @my_message = "Hello what's up"
+  end
 
   def index
     # @readings = Reading.all
+
+    @something_something = "lalaalalalala"
+
     @readings = current_user.readings
+    # binding.pry
+
+    respond_to do |format|
+      format.json{ render :json =>  @readings }
+      format.html
+    end
+    
   end
 
   def new
@@ -13,26 +27,20 @@ class ReadingsController < ApplicationController
 
   # this is also function
   def create
-    # reading = Reading.new(title: params[:reading][:title], url: params[:reading][:title])
-    reading = current_user.readings.new(reading_params)
-    
-    if reading.save # this goes to the model and check all the validations before it gets saved
-      # if validation passes, then it saves, and it returns true
-      # otherwise, it returns false
-      redirect_to readings_path
-    else
-      # if the record doesnt save because it didnt pass the validations
-      # flash[:message] = reading.errors.messages[:base]
+    params 
+    reading = Reading.new
+    reading = reading.save
 
-      flash[:message] = reading.errors.messages
-
-      redirect_to :back
-    end
   end
 
   def show
     @reading = Reading.find(params[:id])
     @comment = Comment.new
+  end
+
+  def data
+    @readings = Reading.all
+    render json: @readings, status: 201
   end
 
   private

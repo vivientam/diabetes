@@ -31,6 +31,8 @@ gem 'spring',        group: :development
 
 gem 'devise'
 
+gem 'pry'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'

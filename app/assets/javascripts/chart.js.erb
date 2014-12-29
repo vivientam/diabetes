@@ -1,0 +1,74 @@
+$(function () {
+
+    // $.ajax({
+    //     type:'GET',
+    //     url: '/readings.json',
+    //     dataType: 'JSON',
+    //     success: function(response){
+    //         console.log(response)
+    //   }
+    // });
+    var chartData = [];
+
+    $.getJSON('/readings.json', function (data) {
+        // Create the chart
+        console.log ("this is data: ", data);
+
+        // chartData starts off as an empty array
+
+        // data is an array with all of our information
+
+        // var chartData = [
+        // {
+
+        //    chartData.push(data(i));
+        // }
+        // ];
+
+        console.log(chartData);
+
+        // for (var i=0; i<data.length; i++){
+        //     chartData.push(data[i].created_at);
+        //     chartData.push(data[i].sugar_level);
+        // };
+        
+         for (var i=0; i<data.length; i++){
+            var object = {};
+
+            moment().valueOf()
+
+            object.x = moment(data[i].created_at).valueOf();
+            object.y = data[i].sugar_level;
+            console.log("object at loop #" + i, object);
+            // chartData.push(object.x);
+            // chartData.push(object.y);
+            chartData.push(object);
+
+        };
+
+        console.log(chartData);
+
+    });
+
+    $('#container').highcharts('StockChart', {
+
+
+        rangeSelector : {
+            selected : 1
+        },
+
+        title : {
+            text : 'Glucose level chart'
+        },
+
+        series : [{
+            name : 'user',
+            data : chartData,
+            tooltip: {
+                valueDecimals: 1
+            }
+        }]
+    });
+
+
+});
