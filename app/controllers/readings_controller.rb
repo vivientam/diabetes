@@ -9,8 +9,6 @@ before_action :authenticate_user!, only: [:new, :create, :index, :cat]
   def index
     # @readings = Reading.all
 
-    @something_something = "lalaalalalala"
-
     @readings = current_user.readings
     # binding.pry
 

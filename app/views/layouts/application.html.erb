@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Rails Basic Template</title>
+  <title>Diabetes</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <script type="text/javascript" src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
@@ -13,24 +13,24 @@
   <div class="container">
 
     <div class="row">
-      <div class="col-lg-9 col-xs-3">
+      <div class="col-lg-3 col-xs-3">
 
         <% if current_user %>
           <%= current_user.email %>
 
           <div>
-          <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "btn btn-default" %>
+          <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "btn btn-primary" %>
           </div>
           <div>
-          <%= link_to "My profile", current_user, :class => "btn btn-default" %>
+          <%= link_to "My profile", current_user, :class => "btn btn-primary" %>
           </div>
 
         <% else %>
           <div>
-          <%= link_to "Sign in", new_user_session_path, :class => "btn btn-default" %>
+          <%= link_to "Sign in", new_user_session_path, :class => "btn btn-primary" %>
           </div>
           <div>
-          <%= link_to "Sign up", new_user_registration_path, :method => :get, :class => "btn btn-default" %>
+          <%= link_to "Sign up", new_user_registration_path, :method => :get, :class => "btn btn-primary" %>
           </div>
         <% end %>
 

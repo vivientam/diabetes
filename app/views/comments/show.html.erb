@@ -1,1 +1,9 @@
-<h1><%= @comment.content %></h1>
+<h3>Reading: </h3>
+
+<h3>Date: </h3>
+
+<h3>Comment #<%= @comment.id %>:</h3>
+
+<%= @comment.content %>
+
+<% button_to "Back to reading", reading, :class => "btn btn-xs btn btn-info" %>
