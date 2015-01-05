@@ -12,7 +12,7 @@ before_action :authenticate_user!, only: [:new, :create]
   end
 
   def create
-    user = current_user.users.new(user_params)
+    user = current_user.users.new(dog)
     
     if user.save
       redirect_to users_path
@@ -28,16 +28,21 @@ before_action :authenticate_user!, only: [:new, :create]
     @user = User.find(params[:id])
   end
 
-  def show
-    
-    @user = User.find(params[:id])
-    
+  def update
+   user = User.find(params[:id])
+   user.update!(dog)
+   redirect_to user_path
   end
 
+  def show
+    @user = User.find(params[:id])
+  end
+
+ 
   # this is only for internal use.
   private
-    def user_params
+    def dog
       params.require(:user).
-        permit(:id, :name, :title, :email, :hospital, :dob)
+        permit(:id, :name, :title, :email, :hospital, :dob, :is_doctor)
     end
 end

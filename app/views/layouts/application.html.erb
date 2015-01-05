@@ -17,13 +17,25 @@
 
         <% if current_user %>
           <%= current_user.email %>
-          <%= button_to "Sign out", destroy_user_session_path, :method => :delete %>
-        <% else %>
 
-          <%= button_to "Sign in", new_user_session_path %>
-          <%= button_to "Sign up", new_user_registration_path, :method => :get %>
+          <div>
+          <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "btn btn-default" %>
+          </div>
+          <div>
+          <%= link_to "My profile", current_user, :class => "btn btn-default" %>
+          </div>
+
+        <% else %>
+          <div>
+          <%= link_to "Sign in", new_user_session_path, :class => "btn btn-default" %>
+          </div>
+          <div>
+          <%= link_to "Sign up", new_user_registration_path, :method => :get, :class => "btn btn-default" %>
+          </div>
         <% end %>
 
+
+        
         <!-- ADD LINK TO MY PROFILE -->
         <!-- ADD LINK TO MY READINGS -->
 

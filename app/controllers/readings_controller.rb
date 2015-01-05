@@ -26,11 +26,11 @@ before_action :authenticate_user!, only: [:new, :create, :index, :cat]
   end
 
   # this is also function
-  def create
-    params 
-    reading = Reading.new
-    reading = reading.save
-
+  def create 
+    reading = current_user.readings.new(reading_params)
+    if reading.save
+      redirect_to reading
+    end
   end
 
   def show

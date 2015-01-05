@@ -1,23 +1,31 @@
-<h1>New users.
-</h1>
+<h1>Update your profile</h1>
 
 <%= form_for @user do |f| %>
   <div>
     <%= f.label :title %>
     <%= f.text_field :title %>
-
+  </div>
+  <div>
     <%= f.label :name %>
     <%= f.text_field :name %>
-
+  </div>
+  <div>
     <%= f.label :email %>
     <%= f.text_field :email %>
-
+  </div>
+  <div>
     <%= f.label :hospital %>
     <%= f.text_field :hospital %>
-
+  </div>
+  <div>
     <%= f.label :dob %>
     <%= f.text_field :dob %>
-
+  </div>
+  <div>
+    <%= f.label "I am a doctor" %>
+    <%= f.check_box :is_doctor, {}, true, false %>
+  </div>
+  <div>
     <%= f.submit "Submit" %>
   </div>
 

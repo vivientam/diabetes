@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   resources :readings
 
+  
+
   get '/data' => 'readings#data'
 
   get '/cat' => 'readings#cat'

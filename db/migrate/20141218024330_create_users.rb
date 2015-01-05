@@ -5,6 +5,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :title
       t.string :hospital
       t.string :dob
+      t.boolean :is_doctor
       
       t.timestamps
     end

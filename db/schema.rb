@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20141218050934) do
     t.string   "title"
     t.string   "hospital"
     t.string   "dob"
+    t.boolean  "is_doctor"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "email",                  default: "", null: false
