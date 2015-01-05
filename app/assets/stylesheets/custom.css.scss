@@ -13,8 +13,28 @@
   align-items: center;
 }
 
+#left-div {
+  min-height: 1000px;
+  background-color: #00096b;
+  padding: 10px 10px 10px 10px;
+}
+
+#left-div-inner {
+  padding: 10px 10px 10px 10px;
+}
+
+.left-div-ind {
+  padding: 10px 10px 10px 10px;
+}
+
 .right {
   vertical-align: right;
+}
+
+.text {
+  font-family: sans-serif, arial;
+  font-size: 14px;
+  color: white;
 }
 
 /*.indexTags {

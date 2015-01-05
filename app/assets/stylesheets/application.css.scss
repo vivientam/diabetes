@@ -17,3 +17,13 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.top {
+  height: 80px;
+  background-color: #00096b;
+}
+
+.sign-buttons {
+  text-align: right;
+  padding: 20px 10px 10px 5px;
+}
