@@ -1,28 +1,41 @@
-<h1>A list of readings is here:</h1>
+<h1>Readings:</h1>
 
 
 <div id="container">Chart
 </div>
 
-<% @readings.each do |reading| %>
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+              <th>#</th>
+              <th>Sugar Level</th>
+              <th>Weight (lb)</th>
+              <th>Date of Create</th>
+              
+              <th>Link</th>
+            </tr>
+        </thead>
 
-  <div>
-    <%= reading.id %>
-    <%= reading.sugar_level %>
-    <%= reading.weight %>
-    <%= reading.created_at %>
 
-    <%= button_to "Link to this reading", reading, method: :get, :class => "btn btn-xs btn btn-info" %>
+        <tbody>
+        <% @readings.each do |reading| %>
+            <tr>
+              <td><%= reading.id %></td>
+              <td><%= reading.sugar_level %></td>
+              <td><%= reading.weight %></td>
+              <td><%= reading.created_at %></td>
+              
+              <td><%= button_to "Link to this reading", reading, method: :get, :class => "btn btn-xs btn-info" %></td>
+            </tr> 
+        <% end %>
+        </tbody>
+    </table>
   </div>
 
-<% end %>
-
-<%= button_to "New reading", new_reading_path, :class => "btn btn-sm btn-warning" %>
-
-<div>
-<%= button_to "Users", users_path, :class => "btn btn-sm btn-warning" %>
-</div>
+<%= button_to "New reading", new_reading_path, method: :get, :class => "btn btn-sm btn-warning" %>
 
 <!-- // <script> -->
 <!-- // $( "p" ).append( reading.sugar_level; -->
 <!-- // </script> -->
+

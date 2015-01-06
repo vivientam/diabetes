@@ -1,17 +1,40 @@
-<h1>A list of comments should be here:</h1>
+<h1>Comments for the readings:</h1>
 
-<% @comments.each do |comment| %>
-  
-  <div>
-    <%= comment.id %>
-    <%= comment.content %>
-    <%= comment.created_at %>
-    <%= button_to "Link to this comment", comment, :class => "btn btn-xs btn-info" %>
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+              <th>#</th>
+              <th>Content</th>
+              <th>Date of Create</th>
+              
+              <th>Link</th>
+            </tr>
+        </thead>
+
+
+        <tbody>
+        <% @comments.each do |comment| %>
+        
+            <tr>
+              <td><%= comment.id %></td>
+              <td><%= comment.content %></td>
+              <td><%= comment.created_at %></td>
+              
+              <td><%= link_to "Link to this comment", comment, :class => "btn btn-xs btn-info" %></td>
+            </tr> 
+        <% end %>
+        </tbody>
+    </table>
   </div>
-<% end %>
 
-<%= button_to "New comment", new_comment_path, :class => "btn btn-sm btn-warning" %>
-<%= button_to "Link to this reading", readings_path, :class => "btn btn-sm btn-warning" %>
+<div class="content-btn">
+<%= link_to "New comment", new_comment_path, :class => "btn btn-sm btn-warning" %>
+</div>
+<div class="content-btn">
+<%= link_to "Link to this reading", readings_path, :class => "btn btn-sm btn-warning" %>
+</div>
 <script>
 $( "p" ).append( comment.content;
 </script>
+

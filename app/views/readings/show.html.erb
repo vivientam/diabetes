@@ -12,7 +12,7 @@
 
   <%= f.text_field :reading_id, :value => @reading.id, :hidden => true %>
 
-  <%= f.submit "Submit new comment" %>
+  <%= f.submit "Submit new comment", :class => "btn btn-sm btn-success" %>
 <% end %>
 
 <!-- I want to list out all the comments made for this reading -->
@@ -22,6 +22,7 @@
     <tr>
       <th>Content</th>
       <th>Owner</th>
+      <th>Link</th>
     </tr>
   </thead>
 
@@ -30,6 +31,8 @@
       <tr>
         <td><%= comment.content %></td>
         <td><%= comment.user.email %></td>
+
+        <td><%= link_to "Link to this comment", comment, :class => "btn btn-sm btn-info"%></td>
       </tr>
     <% end %>
   </tbody>

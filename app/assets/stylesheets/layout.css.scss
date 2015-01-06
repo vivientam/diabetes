@@ -1,6 +1,8 @@
 .body-background{
-  background-color: #6998e1;
-  color: #333330;
+  /*background-color: #6998e1;
+  color: #333330;*/
+  background-image: url("BrushesForNav.png");
+  background-color: #233466;
 }
 
 .logo {
@@ -39,4 +41,8 @@
 
 .left-div-ind {
   padding: 10px 10px 10px 10px;
+}
+
+.layouts-left-btn {
+  padding: 5px 5px 5px 5px;
 }

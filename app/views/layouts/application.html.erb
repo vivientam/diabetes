@@ -36,11 +36,22 @@
       <div id="left-div" class="col-lg-3 col-xs-3">
         <div id="left-div-inner">
           <div class="left-div-ind text">
+
           <% if current_user %>
             <%= current_user.email %>
+            <div class="layouts-left-btn">
+            <%= link_to "Readings", readings_path, :method => :get, :class => "btn btn-primary" %>
+            </div>
+            <div class="layouts-left-btn">
+            <%= link_to "Comments", comments_path, :method => :get, :class => "btn btn-primary" %>
+            </div>
+            <div class="layouts-left-btn">
+            <%= link_to "Users", users_path, :method => :get, :class => "btn btn-primary" %>
+            </div>
+
           <% else %>
           <% end %>
-          
+
           </div>
         </div>
       </div>
