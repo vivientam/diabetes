@@ -7,15 +7,14 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'static_pages#index'
   # path 'controller#method'
-
   
-  resources :users
+  get '/users/edit_profile' => 'users#edit'
+
+  resources :users, :except => :edit
 
   resources :comments
 
   resources :readings
-
-  
 
   get '/data' => 'readings#data'
 

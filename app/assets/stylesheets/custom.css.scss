@@ -1,8 +1,5 @@
-.body-background{
-  /*background-color: #333330;*/
+/*.body-background{
   background-color: #6998e1;
-  /*background-color: hsla(225, 100, 50, 1);*/
-  /*color: #bfbfbb;*/
   color: #333330;
 }
 
@@ -13,77 +10,34 @@
   align-items: center;
 }
 
-#left-div {
-  min-height: 1000px;
-  background-color: #00096b;
-  padding: 10px 10px 10px 10px;
-}
 
-#left-div-inner {
-  padding: 10px 10px 10px 10px;
-}
-
-.left-div-ind {
-  padding: 10px 10px 10px 10px;
-}
 
 .right {
   vertical-align: right;
 }
 
-.text {
-  font-family: sans-serif, arial;
-  font-size: 14px;
-  color: white;
+
+
+#new-user {
+  padding: 10px 10px 10px 10px;
+  vertical-align: center;
 }
 
-/*.indexTags {
-	font-family: sans-serif, arial;
-	font-size: 15px;
-	text-align: left;
-	padding: 5px 10px 30px 10px;
+.new-user-form {
+  padding: 10px 10px 10px 10px;
+  vertical-align: center;
 }
 
-.button {
-	margin-left: 80px;
-	margin-top: 30px;
+.new-user-text {
+  padding: 5px 5px 5px 0px;
+  font-size: 18px;
 }
 
-#par {
-	font-family: sans-serif, arial;
-	text-align:  center;
+.profile-text {
+  padding: 5px 5px 5px 5px;
+  font-size: 18px;
 }
 
-#info {
-	font-family: "Noteworthy", arial;
-	font-size: 20px;
-	text-align: center;
-}
-
-#bullet {
-	font-family: "Noteworthy", arial;
-	text-align: center;
-}
-
-.bulletAct {
-	float: left;
-	font-size: 40px;
-}
-
-.bulletArt {
-	float: right;
-	font-size: 40px;
-}
-
-.modal-title {
-	font-family: "Trattatello", arial;
-	font-size: 20px;
-}
-
-.left-navigation{
-	display: inline-block;
-}
-
-.main-content{
-	display: inline-block;
+#edit-user {
+  padding: 10px 10px 10px 10px;
 }*/
