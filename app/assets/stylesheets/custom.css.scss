@@ -1,19 +1,12 @@
-
-
 .vertical-center {
   min-height: 100%;
   min-height: 100vh;
   display: flex;
-  align-items: center;
 }
-
-
 
 .right {
   vertical-align: right;
 }
-
-
 
 #new-user {
   padding: 10px 10px 10px 10px;
@@ -41,4 +34,16 @@
 
 .content-btn {
   padding: 5px 5px 5px 5px;
+}
+
+.heading {
+  color: black;
+}
+
+.table-text {
+  color: black;
+}
+
+.text-general{
+  color: black;
 }

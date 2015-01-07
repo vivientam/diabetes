@@ -1,7 +1,7 @@
-<h2>Reading on: <%= @reading.created_at %></h2>
+<h2 class="heading">Reading on: <%= @reading.created_at %></h2>
 
-<h3>Sugar Level: <%= @reading.sugar_level %></h3>
-<h3>Weight: <%= @reading.weight %></h3>
+<h3 class="heading">Sugar Level: <%= @reading.sugar_level %></h3>
+<h3 class="heading">Weight: <%= @reading.weight %></h3>
 <!-- We want to be able to create comments here -->
 <!-- We want a form here -->
 
@@ -16,8 +16,8 @@
 <% end %>
 
 <!-- I want to list out all the comments made for this reading -->
-<h1>Comments</h1>
-<table class="table table-condensed">
+<h1 class="heading">Comments</h1>
+<table class="table table-condensed table-text">
   <thead>
     <tr>
       <th>Content</th>
