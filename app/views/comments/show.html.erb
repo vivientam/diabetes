@@ -1,14 +1,15 @@
+<div class="text-general">
+  <h3>Date: <%= @reading.created_at %></h3>
 
-<h3>Date: <%= @reading.created_at %></h3>
+  <h3>Reading: <%= @reading.sugar_level %></h3>
 
-<h3>Reading: <%= @reading.sugar_level %></h3>
+  <h3>Weight (lb): <%= @reading.weight %></h3>
 
-<h3>Weight (lb): <%= @reading.weight %></h3>
+  <h3>Comment #<%= @comment.id %>:</h3>
 
-<h3>Comment #<%= @comment.id %>:</h3>
+  <%= @comment.content %>
 
-<%= @comment.content %>
-
-<div class="content-btn">
-<%= link_to "Back to reading", @comment.reading, :class => "btn btn-xs btn btn-info" %>
+  <div class="content-btn">
+  <%= link_to "Back to reading", @comment.reading, :class => "btn btn-xs btn btn-info" %>
+  </div>
 </div>
