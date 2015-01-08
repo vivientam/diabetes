@@ -1,4 +1,5 @@
 <div class="text-general">
+
   <h3>Date: <%= @reading.created_at %></h3>
 
   <h3>Glucose level (mmol/L): <%= @reading.sugar_level %></h3>
@@ -12,4 +13,5 @@
   <div class="content-btn">
   <%= link_to "Back to reading", @comment.reading, :class => "btn btn-xs btn btn-info" %>
   </div>
+
 </div>

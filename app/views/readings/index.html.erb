@@ -4,37 +4,44 @@
   <%= button_to "New reading", new_reading_path, method: :get, :class => "btn btn-sm btn-warning" %>
 </div>
 
-<div id="container">Chart
-</div>
+<% if current_user.readings.empty? %>
+  <!-- NO GRAPH -->
+  <p>You don't have any readings yet. You can input a new one!</p>
+<% else %>
 
-<div class="table-responsive">
-    <table class="table table-striped table-text">
-        <thead>
-            <tr>
-              <th>#</th>
-              <th>Glucose Level (mmol/L)</th>
-              <th>Weight (lb)</th>
-              <th>Date of Create</th>
-              
-              <th>Link</th>
-            </tr>
-        </thead>
-
-
-        <tbody>
-        <% @readings.each do |reading| %>
-            <tr>
-              <td><%= reading.id %></td>
-              <td><%= reading.sugar_level %></td>
-              <td><%= reading.weight %></td>
-              <td><%= reading.created_at %></td>
-              
-              <td><%= button_to "Link to this reading", reading, method: :get, :class => "btn btn-xs btn-info" %></td>
-            </tr> 
-        <% end %>
-        </tbody>
-    </table>
+  <div id="container">Chart
   </div>
+
+  <div class="table-responsive">
+      <table class="table table-striped table-text">
+          <thead>
+              <tr>
+                <th>#</th>
+                <th>Glucose Level (mmol/L)</th>
+                <th>Weight (lb)</th>
+                <th>Date of Create</th>
+                
+                <th>Link</th>
+              </tr>
+          </thead>
+
+
+          <tbody>
+          <% @readings.each do |reading| %>
+              <tr>
+                <td><%= reading.id %></td>
+                <td><%= reading.sugar_level %></td>
+                <td><%= reading.weight %></td>
+                <td><%= reading.created_at %></td>
+                
+                <td><%= button_to "Link to this reading", reading, method: :get, :class => "btn btn-xs btn-info" %></td>
+              </tr> 
+          <% end %>
+          </tbody>
+      </table>
+  </div>
+
+<% end %>
 
 
 

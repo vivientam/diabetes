@@ -3,36 +3,40 @@
   <h1>Update your profile</h1>
 
   <form class="form-inline">
-    <div class="form-group has-success has-feedback">
+    <div class="form-group">
       
     <%= form_for @user do |f| %>
-      <div>
-        <%= f.label :title %>
-        <%= f.text_field :title %>
-      </div>
-      <div>
-        <%= f.label :name %>
-        <%= f.text_field :name %>
-      </div>
-      <div>
-        <%= f.label :email %>
-        <%= f.text_field :email %>
-      </div>
-      <div>
-        <%= f.label :hospital %>
-        <%= f.text_field :hospital %>
-      </div>
-      <div>
-        <%= f.label :dob %>
-        <%= f.text_field :dob %>
-      </div>
-      <div>
-        <%= f.label "I am a doctor" %>
-        <%= f.check_box :is_doctor, {}, true, false %>
-      </div>
-        <%= f.submit "Submit", :class => "btn btn-warning" %>
 
-    <% end %>
+        <div class="spacing">
+          <%= f.label :title, :class => "title-spacing" %>
+          <%= f.text_field :title, :class => "form-control"%>
+        </div>
+        <div class = "spacing">
+          <%= f.label :name, :class => "title-spacing" %>
+          <%= f.text_field :name, :class => "form-control" %>
+        </div>
+        <div class = "spacing">
+          <%= f.label :email, :class => "title-spacing" %>
+          <%= f.text_field :email, :class => "form-control" %>
+        </div>
+        <div class = "spacing">
+          <%= f.label :hospital, :class => "title-spacing" %>
+          <%= f.text_field :hospital, :class => "form-control" %>
+        </div>
+        <div class = "spacing">
+          <%= f.label :dob, :class => "title-spacing" %>
+          <%= f.text_field :dob, :class => "form-control" %>
+        </div>
+        <div class = "spacing">
+          <%= f.label "I am a doctor" %>
+          <%= f.check_box :is_doctor, {}, true, false %>
+        </div>
+          <%= f.submit "Submit", :class => "btn btn-warning" %>
+
+        </div>
+
+      <% end %>
+
     </div>
   </form>
 </div>

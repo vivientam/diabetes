@@ -1,37 +1,49 @@
+
+
 <h1 class="heading">Comments for the readings:</h1>
 
-<div class="table-responsive">
-    <table class="table table-striped table-text">
-        <thead>
-            <tr>
-              <th>#</th>
-              <th>Content</th>
-              <th>Date of Create</th>
-              
-              <th>Link</th>
-            </tr>
-        </thead>
+<% if current_user.comments.empty? %>
+
+  <p>
+   You need to enter a new reading of glucose level!
+  </p>
+  <%= button_to "New reading", new_readings, method: :get, :class => "btn btn-sm btn-success"%>
+
+<% else %>
+
+  <div class="table-responsive">
+      <table class="table table-striped table-text">
+          <thead>
+              <tr>
+                <th>#</th>
+                <th>Content</th>
+                <th>Date of Create</th>
+                
+                <th>Link</th>
+              </tr>
+          </thead>
 
 
-        <tbody>
-        <% @comments.each do |comment| %>
-        
-            <tr>
-              <td><%= comment.id %></td>
-              <td><%= comment.content %></td>
-              <td><%= comment.created_at %></td>
-              
-              <td><%= link_to "Link to this comment", comment, :class => "btn btn-xs btn-info" %></td>
-            </tr> 
-        <% end %>
-        </tbody>
-    </table>
-  </div>
+          <tbody>
+          <% @comments.each do |comment| %>
+          
+              <tr>
+                <td><%= comment.id %></td>
+                <td><%= comment.content %></td>
+                <td><%= comment.created_at %></td>
+                
+                <td><%= link_to "Link to this comment", comment, :class => "btn btn-xs btn-info" %></td>
+              </tr> 
+          <% end %>
+          </tbody>
+      </table>
+    </div>
 
-<div class="content-btn">
-<%= link_to "Link to this readings", readings_path, :class => "btn btn-sm btn-warning" %>
-</div>
-<script>
-$( "p" ).append( comment.content;
-</script>
+    <div class="content-btn">
+    <%= link_to "Link to this readings", readings_path, :class => "btn btn-sm btn-warning" %>
+    </div>
+  <script>
+  $( "p" ).append( comment.content;
+  </script>
 
+<% end %>
