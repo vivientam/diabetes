@@ -29,6 +29,7 @@ before_action :authenticate_user!, only: [:new, :create, :index, :cat]
     if reading.save
       redirect_to reading
     end
+
   end
 
   def show

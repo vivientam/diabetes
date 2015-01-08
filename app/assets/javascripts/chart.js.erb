@@ -1,5 +1,6 @@
 $(function () {
   var chartData = [];
+  var weightData = [];
 
   $.getJSON('/readings.json', function (data) {
     // Create the chart
@@ -7,16 +8,21 @@ $(function () {
 
      for (var i=0; i<data.length; i++){
       var object = {};
+      var line = {};
 
       object.x = moment(data[i].created_at).valueOf();
       object.y = data[i].sugar_level;
       console.log("object at loop #" + i, object);
-      // chartData.push(object.x);
-      // chartData.push(object.y);
       chartData.push(object);
+
+      line.x = moment(data[i].created_at).valueOf();
+      line.y = data[i].weight;
+      console.log("line at loop #" + i, line);
+      weightData.push(line);
     };
 
     console.log(chartData);
+    console.log(weightData);
 
     $('#container').highcharts('StockChart', {
       rangeSelector: {
@@ -25,13 +31,51 @@ $(function () {
       title: {
           text: 'Glucose level chart'
       },
+      yAxis:[{
+        gridLineWidth: 0,
+        labels: {
+          format: '{value} mmol/L',
+          style: {
+                    color: Highcharts.getOptions().colors[0]
+                }
+        },
+        title:{
+          text: 'Average glucose level',
+          style: {
+                    color: Highcharts.getOptions().colors[0]
+                }
+        },
+        opposite: true
+      },
+      {
+        labels: {
+          format: '{value} lb'
+        },
+        title:{
+          text: 'Average weight'
+        }
+      }
+      ],
+      tooltip: {
+        shared: true
+      },
       series: [{
-        name: 'user',
+        name: 'sugar level',
         data: chartData,
+        yAxis: 0,
         tooltip: {
           valueDecimals: 1
         }
-      }]
+      },
+      {
+        name: 'weight',
+        data: weightData,
+        yAxis: 1,
+        tooltip: {
+          valueDecimals: 0
+        }
+      }
+      ]
     });
   });
 });

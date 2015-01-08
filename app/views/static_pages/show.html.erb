@@ -16,7 +16,7 @@
       </div>
       <% if current_user %>
       <div class="text-general">
-        <p>Step 1:<br>Click on the Reading button.
+        <p>Step 1:<br>Click on the <%= link_to "Readings", readings_path, :method => :get, :class => "btn btn-primary" %>
 
         <br>Step 2:<br>Enter your glucose level (mmol/L) and weight (lb).
         </p>

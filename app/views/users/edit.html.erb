@@ -2,30 +2,30 @@
 
   <h1>Update your profile</h1>
 
-  <form class="form-inline">
+  <!-- <form class="form-inline"> -->
     <div class="form-group">
       
-    <%= form_for @user do |f| %>
+    <%= form_for current_user do |f| %>
 
         <div class="spacing">
           <%= f.label :title, :class => "title-spacing" %>
-          <%= f.text_field :title, :class => "form-control"%>
+          <%= f.text_field :title, :class => "form-control user-edit"%>
         </div>
         <div class = "spacing">
           <%= f.label :name, :class => "title-spacing" %>
-          <%= f.text_field :name, :class => "form-control" %>
+          <%= f.text_field :name, :class => "form-control user-edit" %>
         </div>
         <div class = "spacing">
           <%= f.label :email, :class => "title-spacing" %>
-          <%= f.text_field :email, :class => "form-control" %>
+          <%= f.text_field :email, :class => "form-control user-edit" %>
         </div>
         <div class = "spacing">
           <%= f.label :hospital, :class => "title-spacing" %>
-          <%= f.text_field :hospital, :class => "form-control" %>
+          <%= f.text_field :hospital, :class => "form-control user-edit" %>
         </div>
         <div class = "spacing">
           <%= f.label :dob, :class => "title-spacing" %>
-          <%= f.text_field :dob, :class => "form-control" %>
+          <%= f.text_field :dob, :class => "form-control user-edit" %>
         </div>
         <div class = "spacing">
           <%= f.label "I am a doctor" %>
@@ -38,5 +38,5 @@
       <% end %>
 
     </div>
-  </form>
+  <!-- </form> -->
 </div>
