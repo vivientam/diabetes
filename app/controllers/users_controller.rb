@@ -29,7 +29,7 @@ before_action :authenticate_user!, only: [:new, :create]
 
   def update
    user = User.find(params[:id])
-   user.update!(dog)
+   user.update(dog)
    redirect_to user_path
   end
 

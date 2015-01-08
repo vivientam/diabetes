@@ -5,7 +5,7 @@
   <% if current_user.comments.empty? %>
 
     <p class="text-general text-reading">
-     You need to enter a new reading of glucose level!
+     You don't have any comments yet...<br>You need to enter a new reading of glucose level!
     </p>
     <%= button_to "New reading", new_reading_path, method: :get, :class => "btn btn-sm btn-warning" %>
 
