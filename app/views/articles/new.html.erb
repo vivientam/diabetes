@@ -1,0 +1,26 @@
+<div class="text-general">
+
+<h1>Enter new article:</h1>
+
+<%= form_for @article do |f| %>
+
+  <div class="spacing">
+    <%= f.label :title, :class => "title-spacing" %>
+    <%= f.text_field :title, :class => "form-control user-edit"%>
+  </div>
+
+  <div class="spacing">
+    <%= f.label :content, :class => "title-spacing" %>
+    <%= f.text_field :content, :class => "form-control user-edit"%>
+  </div>
+
+  <div class="spacing">
+    <%= f.label :image_url, :class => "title-spacing" %>
+    <%= f.text_field :image_url, :class => "form-control user-edit"%>
+  </div>
+
+  <%= f.submit "Submit", :class => "btn btn-warning" %>
+
+  <% end %>
+
+</div>

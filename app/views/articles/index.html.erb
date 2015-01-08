@@ -3,9 +3,10 @@
 <% @articles.each do |article| %>
 
   <div>
-    <%= article.id %>
+
     <%= article.title %>
     <%= article.content %>
+    <img src="<%= article.image_url%>">
   </div>
 
 <% end %>
