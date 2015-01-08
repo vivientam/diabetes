@@ -21,10 +21,9 @@
   </div>
 </div>
 
-<div>
-<%= button_to "Edit my profile", users_edit_profile_path, method: :get, :class=> "btn btn-sm btn-success" %>
-</div>
+<div class="content-btn">
+<%= button_to "Edit my profile", users_edit_profile_path, method: :get, :class => "btn btn-sm btn-success" %>
 
-<div>
-<%= button_to "Back to users", users_path, method: :get, :class => "btn btn-sm btn-warning" %>
+<%= button_to "Change my password", edit_user_registration_path, method: :get, :class => "btn btn-sm btn-success" %>
+
 </div>

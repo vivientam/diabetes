@@ -1,18 +1,19 @@
 <h2 class="heading">Reading on: <%= @reading.created_at %></h2>
 
-<h3 class="heading">Sugar Level: <%= @reading.sugar_level %></h3>
-<h3 class="heading">Weight: <%= @reading.weight %></h3>
+<h3 class="heading">Glucose Level (mmol/L): <%= @reading.sugar_level %></h3>
+<h3 class="heading">Weight (lb): <%= @reading.weight %></h3>
 <!-- We want to be able to create comments here -->
 <!-- We want a form here -->
 
 <!-- empty comment object -->
 <%= form_for @comment do |f| %>
-  <%= f.label :content %>
-  <%= f.text_field :content %>
+
+  <%= f.text_field :content, :placeholder => "Comment", :class => "form-control" %>
 
   <%= f.text_field :reading_id, :value => @reading.id, :hidden => true %>
-
-  <%= f.submit "Submit new comment", :class => "btn btn-sm btn-success" %>
+  <div class="content-btn">
+    <%= f.submit "Submit new comment", :class => "btn btn-sm btn-success" %>
+  </div>
 <% end %>
 
 <!-- I want to list out all the comments made for this reading -->
@@ -39,6 +40,5 @@
 </table>
 
 <div>
-<a href="/readings" class="btn btn-sm btn-warning">Back to readings</a>
-  
+  <%= link_to "Back to readings", readings_path, :method => :get, :class => "btn btn-sm btn-warning" %>
 </div>

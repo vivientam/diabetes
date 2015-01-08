@@ -1,15 +1,17 @@
-<h1 class="heading">Add a new reading:
-</h1>
+<div class="text-centre text-general">
+  <h1>Please add a new reading:
+  </h1>
 
-<%= form_for @reading do |f| %>
-  <div>
-    <%= f.label :sugar_level %>
-    <%= f.text_field :sugar_level %>
+  <%= form_for @reading do |f| %>
+    <div class="new-reading-form form-inline">
+      <%= f.label :sugar_level, :class => "sr-only" %>
+      <%= f.text_field :sugar_level, :placeholder => "Glucose Level (mmol/L)", :class => "form-control" %>
 
-    <%= f.label :weight %>
-    <%= f.text_field :weight %>
+      <%= f.label :weight, :class => "sr-only" %>
+      <%= f.text_field :weight, :placeholder => "Weight (lb)", :class => "form-control" %>
 
-    <%= f.submit "Submit" %>
-  </div>
+      <%= f.submit "Submit", :class => "btn btn-warning" %>
+    </div>
 
-<% end %>
+  <% end %>
+</div>

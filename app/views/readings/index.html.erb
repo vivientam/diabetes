@@ -1,5 +1,8 @@
 <h1 class="heading">Readings:</h1>
 
+<div class="content-btn">
+  <%= button_to "New reading", new_reading_path, method: :get, :class => "btn btn-sm btn-warning" %>
+</div>
 
 <div id="container">Chart
 </div>
@@ -9,7 +12,7 @@
         <thead>
             <tr>
               <th>#</th>
-              <th>Sugar Level</th>
+              <th>Glucose Level (mmol/L)</th>
               <th>Weight (lb)</th>
               <th>Date of Create</th>
               
@@ -33,7 +36,7 @@
     </table>
   </div>
 
-<%= button_to "New reading", new_reading_path, method: :get, :class => "btn btn-sm btn-warning" %>
+
 
 <!-- // <script> -->
 <!-- // $( "p" ).append( reading.sugar_level; -->
