@@ -36,7 +36,7 @@ before_action :authenticate_user!, only: [:new, :create]
     # if params[:user] != nil
       current_user.update_attributes(user_params)
       # @user.update(:resume => params[:user][:resume]) if params[:user][:resume] != nil
-      redirect_to :back
+      redirect_to current_user
     # end
   end
 

@@ -24,12 +24,15 @@ $(function () {
     console.log(chartData);
     console.log(weightData);
 
-    $('#container').highcharts('StockChart', {
+    $('#container').highcharts({
       rangeSelector: {
           selected: 1
       },
       title: {
           text: 'Glucose level chart'
+      },
+      xAxis:{
+        type: 'datetime'
       },
       yAxis:[{
         gridLineWidth: 0,
