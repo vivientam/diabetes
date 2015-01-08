@@ -2,13 +2,8 @@ class StaticPagesController < ApplicationController
   def index
   end
 
-  def contacts
+  def show
   end
 
-  def deserves
-  end
-
-  def hobbies
-  end
-
+ 
 end

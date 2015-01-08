@@ -5,9 +5,19 @@
 
 .sp-content {
   font-family: sans-serif;
-  font-size: 15px;
+  font-size: 20px;
   color: black;
-  max-width: 400px;
-  text-align: center;
+  /*background-color: rgba(78, 181, 244, .3);*/
+  max-width: 500px;
 }
 
+.welcome {
+  font-family: "Trattatello", arial;
+  font-size: 70px;
+  color: #44b7f4;
+}
+.slogen {
+  font-family: "SignPainter-HouseScript", arial;
+  font-size: 90px;
+  color: #233466;
+}

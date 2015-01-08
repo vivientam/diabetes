@@ -2,6 +2,10 @@
 
 <h3 class="heading">Glucose Level (mmol/L): <%= @reading.sugar_level %></h3>
 <h3 class="heading">Weight (lb): <%= @reading.weight %></h3>
+
+<!-- I want to list out all the comments made for this reading -->
+<h1 class="heading">Comments</h1>
+
 <!-- We want to be able to create comments here -->
 <!-- We want a form here -->
 
@@ -16,8 +20,6 @@
   </div>
 <% end %>
 
-<!-- I want to list out all the comments made for this reading -->
-<h1 class="heading">Comments</h1>
 <table class="table table-condensed table-text">
   <thead>
     <tr>

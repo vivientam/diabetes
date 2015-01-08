@@ -2,8 +2,13 @@
   /*background-color: #6998e1;
   color: #333330;*/
   background-image: image-url("BrushesForNav.png");
-  background-color: #233466;
-  background-size: 1500px 1100px;
+  /*background-color: #233466;*/
+  background-color: rgba(35, 52, 102, .8);
+
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+
   background-repeat: no-repeat;
 }
 
@@ -66,3 +71,7 @@
 .email-text {
   font-size: 20px;
 } 
+
+.layouts-content {
+  padding: 5px 5px 5px 10px;
+}

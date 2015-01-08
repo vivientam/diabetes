@@ -29,13 +29,14 @@
           <%= link_to "Sign in", new_user_session_path, :class => "btn btn-primary" %>
           <%= link_to "Sign up", new_user_registration_path, :method => :get, :class => "btn btn-primary" %>
           </div>
+
         <% end %>
       </div>
     </div>
 
 
     <div class="row">
-      <div id="left-div" class="col-lg-3 col-xs-3">
+      <div id="left-div" class="col-lg-3 col-sm-3 col-xs-3">
         <div id="left-div-inner">
           <div class="left-div-ind text">
             <div class="articles">
@@ -64,9 +65,10 @@
       </div>
 
       <div class="col-lg-9 col-xs-9">
-         <%= yield %>
-      </div>
+        <%= yield %>
     
+
+      </div>
     </div>
   </div>
 

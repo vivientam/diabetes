@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: {
+    registrations: 'user/registrations'
+  }
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'static_pages#index'
+  root 'static_pages#show'
   # path 'controller#method'
   
   get '/users/edit_profile' => 'users#edit'
@@ -15,6 +17,10 @@ Rails.application.routes.draw do
   resources :comments
 
   resources :readings
+
+  resources :articles
+
+  get '/index' => 'static_pages#index'
 
   get '/data' => 'readings#data'
 
