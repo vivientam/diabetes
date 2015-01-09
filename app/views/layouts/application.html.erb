@@ -40,7 +40,7 @@
         <div id="left-div-inner">
           <div class="left-div-ind text">
             <div class="articles">
-              Articles
+              <%= link_to "Article", articles_path, :method => :get %>
             </div>
 
           <% if current_user %>

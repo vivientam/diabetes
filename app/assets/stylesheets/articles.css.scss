@@ -1,3 +1,14 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.article-image {
+  max-width: 380px;
+  max-height: 380px;
+  min-width: 300px;
+  min-height: 300px;
+}
+
+.article-box {
+  background-color: rgba(255,255,255, .6);
+  padding: 3px 10px 3px 10px;
+}

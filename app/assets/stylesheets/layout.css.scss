@@ -23,13 +23,15 @@
   padding: 10px 10px 10px 20px;
 }
 
-.articles {
+.articles a {
   font-family: "Trattatello", arial;
   font-size: 30px;
   /*color: #F9B938;*/
   color: #A249E8;
 }
-
+.articles a:hover {
+  text-decoration: none;
+}
 .text {
   font-family: sans-serif, arial;
   font-size: 14px;

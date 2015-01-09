@@ -1,12 +1,19 @@
-<h1>Article page</h1>
+<h1 class="text-general">Article page</h1>
+
+<div class="row text-general">
 
 <% @articles.each do |article| %>
 
-  <div>
 
-    <%= article.title %>
-    <%= article.content %>
-    <img src="<%= article.image_url%>">
+  <div class="col-lg-6">
+    <div class="article-box">
+      <h2 class="article-title"><%= article.title %></h2>
+      <p class="article-content"><%= article.content %></p>
+      <img src="<%= article.image_url%>" class="article-image">
+    </div>
   </div>
 
+
 <% end %>
+
+</div>
